@@ -13,9 +13,9 @@ def main():
     print("Welcome to the Hospital Management System")
     print("Initializing system...")
     # Create staff members
-    doctor = Doctor("Dr. Wille", "9001WW")
-    nurse = Nurse("Nurse Leon", "9001JJ")
-    admin = Admin("Mr. Ibrahem", "SPECIAL1")
+    doctor = Doctor("Wille", "9001WW")
+    nurse = Nurse("Leon", "9001JJ")
+    admin = Admin("Ibrahem", "SPECIAL1")
 
     print(doctor.perform_duty())
     print(nurse.perform_duty())
@@ -35,6 +35,7 @@ def main():
     # Output basic patient summary
     print(f"Inpatient: {inpatient.name}, Diagnoses: {[d.description for d in inpatient.medical_record.diagnoses]}")
     print(f"Prescriptions: {[p.medication for p in inpatient.medical_record.prescriptions]}")
+    print(f"Outpatient: {outpatient.name}, Appointment Date: {outpatient.appointment_date}")
 
 if __name__ == "__main__":
     main()
